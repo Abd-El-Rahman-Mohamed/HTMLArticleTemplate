@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript selectors — Meta</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noticia+Text|Lalezar');
+
+        :root{
+          --padding: 21px;
+          --bg-color: #FFE6C7;
+          --text-color: #454545;
+          --highlighttext-color: #6e6d6d;
+          --bgtext-color: #252525;
+          --accent-color: #FF6000;
+          --font-family: 'Noticia Text';
+          --font-display: 'Lalezar';
+        }
+
+        html{
+          margin: 0;
+          padding: 0;
+        }
+
+        body{
+          max-width: 1080px;
+          margin: 0 auto;
+          padding: var(--padding);
+          color: var(--text-color);
+          background: var(--bg-color);
+          font-family: var(--font-family);
+          line-height: 2;
+          font-size: 21px;
+        }
+
+        h2{
+          font-size: 180%;
+          transform: translateX(-5px);
+          font-family: var(--font-display);
+          margin-bottom: 0;
+        }
+
+        a{
+          color: var(--text-color);
+        }
+
+        p{
+          margin-bottom: 2em;
+        }
+
+        strong{
+          display: inline-block;
+          transform: translateX(-5px);
+          font-size: 130%;
+          line-height: 1;
+          font-family: var(--font-display);
+        }
+
+        strong:before{
+          content: '🎙️';
+          margin-right: 5px;
+          margin-top: 34px; 
+          display: inline-block;
+        }
+
+        h2:after{
+          content: '';
+          display: block;
+          height: 8px;
+          background: var(--accent-color);
+          max-width: 55px;
+          transform: skewX(-21deg) translateY(-13px);
+          border-radius: 3px;
+        }
+
+        /* Styling by Classes */
+        /**********************/
+        .bold {
+          font-weight: bold;
+        }
+        .italic {
+          font-style: italic;
+        }
+
+        code.highlight {
+          color: var(--highlighttext-color);
+          background-color: var(--bgtext-color);
+        }
+
+        .error {
+          display: block;
+          background-color: rgba(255,0,0,.06);
+          color: #9e1e1e;
+        }
+
+        .small {
+          font-size: smaller;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript selectors — Meta</h1>
+
+    <h2>Transcript</h2>
+    <p>
+        One of the most powerful features of JavaScript is dom manipulation.
+        <br>
+        For example, you can click on a button and change the color of some text or even display a pop up message.
+        <br>
+        Essentially, you're dynamically updating the html content in real time.
+        <br>
+        To do this, you must be able to locate the objects in your html document that you want to manipulate.
+        <br>
+        In this video, I'll guide you through how to selectors in JavaScript to quickly find specific objects in a document.
+        <br>
+        JavaScript selectors work with the document object which you can access by typing the keyword document.
+        <br>
+        This returns the webpage stored in the browser's memory known as the document object model or DOM.
+        <br>
+        Alternatively, I can run a council log on the document keyword to get the same result.
+        <br>
+        Let's start locating specific elements inside the document object using the query selector method.
+        <br>
+        For example, I know this page contains two HTML paragraph element, to access the first one I typed document.querySelector,
+        <br>
+        Then in single quotes inside of the parenthesis, I typed the letter P.
+        <br>
+        When I press enter to run the command, it returns the first P element.
+        <br>
+        I can then expand this to view the paragraph text contained within, this method can be used with other html elements, such as the 
+        anchor tag.
+        <br>
+        If I run the same command with the letter A, I get back the first anchor element on the page.
+        <br>
+        There is a very similarly named JavaScript selector that allows me to get all the matches from a web page.
+        <br>
+        It's the query selector all method, to demonstrate this, I type document dot query selector all.
+        <br>
+        Inside the parentheses, I passed the p letter as a string and indeed I get back a result that shows that there are two paragraph 
+        tags on this page.
+        <br>
+        Another useful JavaScript selector is get element by ID which can find objects in the dawn that match a specified html ID 
+        attributes.
+        <br>
+        For example, let's say we want to find something on this page with the idea of heading, I typed document.getelement by ID.
+        <br>
+        And then the string heading in parentheses, I press enter and notice that an H1, element is returned assigned with the html ID 
+        attribute value of heading.
+        <br>
+        Next, let's use a similar method that returns an element based on a specified class name rather than ID.
+        <br>
+        We can do this by calling document.getElementByClassName.
+        <br>
+        I typed document.getElementsByClassName and then the string txt and parentheses.
+        <br>
+        Again, I press enter and notice that two results are returned.
+        <br>
+        The two paragraph tags containing the class name of txt.
+        <br>
+        If you are a beginner on your journey with JavaScript, it is important to note that the word element is singular for ID and 
+        plural for class name.
+        <br>
+        Additionally, suppose the element you're looking for cannot be found in that case you will be returned null for IDs.
+        <br>
+        An empty collection represented by square brackets for class names.
+        <br>
+        In this video you learned how to use JavaScript selectors to speed up the process of finding specific objects in a document.
+    </p>
+</body>
+
+</html>
